@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wraper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.nav-bar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+    gap: 2.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.nav-brand{
+    color: black;
+    font-family: fixel;
+    font-weight: bolder;
+    font-size: large;
+    align-items: center;
+    display: flex;
+}
+.nav-item{
+    margin: 0 5rem;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+.nav-item a{
+    padding: 0.5rem;
+    font-family:  fantasy;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar button{
+    border: 0;
+    text-decoration: none;
+    padding:0 0.5rem;
+    background-color: transparent;
+    --fa-animation-duration: 4s; --fa-fade-opacity: 0.6;
+}
+.home{
+    border-bottom: 5px rgb(55, 145, 73) solid;
+}
+.nav-bar button:hover{
+    cursor: pointer;
+    box-shadow:7px 5px 2px rgb(55, 145, 73);
+}
+.nav-item li :hover{
+    border-bottom: 5px rgb(55, 145, 73) solid;
+    
+}
+.para{
+    display: flex;
+    position: relative;
+    background: fixed;
+    background: radial-gradient(rgb(172, 172, 172), rgb(212, 210, 210),white);
+    height: 100%;
+    width: 100vw;
+}
+
+.para .bg2{
+    top: 2rem;
+    left: 25rem;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.con{
+    position: relative;
+    top: 25%;
+    left: -15%;
+    width: 100vw;
+    color: black; 
+
+}
+.con-text{
+    text-align: center;
+}
+.con h1{
+    text-shadow:0 0 2px black ; 
+    font-size: 60px;
+}
+.con h2{
+    font-size: 50px;
+}
+.con h3{
+    font-weight: lighter;
+    font-size: 40px;
+}
+.apoint{
+    margin: 1rem;
+    position: relative;
+    padding: 0.5rem;
+    display:inline-block;
+    background-color: rgb(55, 145, 73);
+    color: white;
+    box-shadow: 0 0 2px black;
+    border-radius: 10px;
+    z-index: 1;
+    font-size: x-large;
+    cursor: pointer;
+}
+.apoint::before{
+    content: "";
+    background-color: #2895f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transform-origin: center;
+    transform: scaleX(0);
+    cursor: pointer;
+
+}
+.apoint:hover:before{
+    transition: 1s;
+    transform: scaleX(1);
+}
+.time{
+    top: -1rem;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    font-size:x-large;
+    color: whitesmoke;
+    
+}
+.emergency{
+    padding:1rem  2rem;
+    text-align: center;
+    width: 30vw;
+    background-color: #2895f1;
+}
+.emergency a{
+    text-decoration: none;
+    color: white;
+}
+.service-time{
+    padding:1rem 2rem;
+    text-align: center;
+    border: 1px solid #2895f1;
+    background-color: #0071d1;
+    width: 30vw;
+}
+.time-table-section ul li{
+    margin: 1rem 0 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px dashed whitesmoke;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-time-end{
+    padding:1rem 2rem;
+    text-align: center;
+    background-color: #0060b1;
+    width: 30vw;
+}
+.Specialist{
+    margin: 4rem auto;
+    width: 90vw;
+    height: 100vh;
+
+}
+.hading{
+    text-align: center;
+}
+.bar{
+    margin: 0 auto;
+    height: 0.5rem;
+    width: 5rem;
+    border-radius: 10%;
+    background-color:rgb(55, 145, 73) ;
+}
+.special-text{
+    margin: 5rem auto;
+    display: flex;
+    gap: 2rem;
+}
+.Specialist h2{
+    color: #2895f1;
+}
+.special-text p{
+    font-size: larger;
+}
+
+.image-frame {
+    border-radius: 2%;
+    width: 90vw;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeInOut 9s infinite;
+}
+
+.image-frame img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.image-frame img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.image-frame img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.special-img{
+    display: flex;
+    gap: 4.5rem;
+    margin: 0 auto;
+    
+}
+.clinic img{
+    width: 290px; 
+    height: 200px;
+}
+.clinic-text{
+    color: whitesmoke;
+    text-align: center;
+    padding: 0.5rem 0;
+    background-color: #2895f1;
+}
+.services-form{
+    background-image: url(images/service-bg.png);
+    background-attachment: fixed;
+    margin: 17rem auto;
+    padding: 5rem;
+    width: 100vw;
+    display: flex;
+    margin-bottom: 0;
+}
+.services-text{
+    flex: 2.5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.serv{
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+
+.appointment-form{
+    font-size: larger;
+    padding: 1rem;
+    background-color: white;
+    flex: 1;
+}
+.appointment-form .hed{
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(55, 145, 73),#2895f1);
+    color: whitesmoke;
+}
+.ff{
+    display: flex;
+    gap: 1rem;
+}
+.contect{
+    margin: 4rem auto;
+    width: 90vw;
+    height: 100vh;
+}
+.foot{
+    background-color: #2895f1;
+    font-size: large;
+}
+.bb{
+    background-color: rgb(55, 145, 73);
+    color: whitesmoke;
+}
+.bb:hover{
+    background-color: red;
+}
+.tt{
+    background: linear-gradient(to right, rgb(55, 145, 73),#2895f1);
+    color: whitesmoke;
+}
+.cc:hover{
+    color: red;
+}
+@media only screen and (max-width: 600px) {
+    .nav-bar{
+        padding: 0.5rem 0;
+        gap: 0;
+    }
+    .nav-brand{
+        font-size: medium;
+    }
+    .nav-item{
+        display: none;
+    }
+    .bg2{
+        display: none;
+    }
+    .para{
+        padding-left: 5rem;
+        text-align: center;
+    }
+    .time{
+        flex-direction: column; 
+    }
+    .emergency{
+        width: 100%;
+    }
+    .service-time{
+        width: 100%;
+    }
+    .service-time-end{
+        width: 100%;
+    }
+    .special-text{
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+    .special-img{
+        display: none;
+    }
+    .appointment-form{
+        margin-top: 5rem;
+        padding: 0.5rem;
+    }
+    .services-form{
+        padding: 2rem;
+    }
+    .appointment-form .hed{
+        padding: 0.5rem;
+    }
+    .services-form{
+        flex-direction: column;
+    }
+    
+    .con h1{
+        text-shadow:0 0 2px black ; 
+        font-size: 50px;
+    }
+    .con h2{
+        font-size: 40px;
+    }
+    .con h3{
+        font-weight: lighter;
+        font-size: 40px;
+    }
+  }

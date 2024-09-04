@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Feedback Form</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+        body {
+            background-image: url("https://t3.ftcdn.net/jpg/09/32/26/74/240_F_932267458_Zqtzmc9EIfMjenziYeSO5FLwC8ryfhHy.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .nav-bar{
+    width: 100vw;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+    gap: 2.5rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+.nav-brand{
+    color: black;
+    font-family: fixel;
+    font-weight: bolder;
+    font-size: large;
+    align-items: center;
+    display: flex;
+}
+.nav-item{
+    margin: 0 5rem;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+.nav-item a{
+    padding: 0.5rem;
+    font-family:  fantasy;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar button{
+    border: 0;
+    text-decoration: none;
+    padding:0 0.5rem;
+    background-color: transparent;
+    --fa-animation-duration: 4s; --fa-fade-opacity: 0.6;
+}
+.home{
+    border-bottom: 5px rgb(55, 145, 73) solid;
+}
+.nav-bar button:hover{
+    cursor: pointer;
+    box-shadow:7px 5px 2px rgb(55, 145, 73);
+}
+.nav-item li :hover{
+    border-bottom: 5px rgb(55, 145, 73) solid;
+    
+}
+        .feedback-form {
+            position: relative;
+          top: 2rem;
+          left: -20rem;
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .feedback-form h2 {
+            text-align: center;
+            color: #333;
+        }
+        .feedback-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .feedback-form input,
+        .feedback-form select,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .feedback-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <img src="images/logo.png" alt="" height="70">
+            <h3>Patient Path & Care</h3></div>
+        <ul class=" mb-0 nav-item">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="index.html" target="_blank">Times</a></li>
+            <li><a href="index.html" target="_blank">About Us</a></li>
+            <li><a href="index.html" target="_blank">services</a></li>
+            <li><a href="#">Doctor</a></li>
+            <li><a href="#feedback.html" class="home">Feedback</a></li>
+        </ul>
+        <button data-toggle="modal" data-target="#myModal"><i class="fa-2x"><i class="fa-solid fa-user"></i></i></button>
+    </div>
+    <div class="feedback-form">
+        <h2>Patient Feedback Form</h2>
+        <form action="your-backend-script-url" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="department">Department Visited:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="general">General Medicine</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="gynecology">Gynecology</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label for="rating">Rate Your Experience:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Good</option>
+                <option value="2">Fair</option>
+                <option value="1">Poor</option>
+            </select>
+
+            <label for="suggestions">Suggestions for Improvement:</label>
+            <textarea id="suggestions" name="suggestions" rows="5" placeholder="Any suggestions for us?"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/71e935b421.js" crossorigin="anonymous"></script>
+</body>
+</html>
