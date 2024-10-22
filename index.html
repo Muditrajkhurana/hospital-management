@@ -22,7 +22,7 @@
                 <li><a href="#">Doctor</a></li>
                 <li><a href="feedback.html" target="_blank">Feedback</a></li>
             </ul>
-            <button data-toggle="modal" data-target="#myModal"><i class="fa-2x"><i class="fa-solid fa-user"></i></i></button>
+            <button onclick="window.location.href='apointment.html'"><i class="fa-2x"><i class="fa-solid fa-user"></i></i></button>
         </div>
         <div class="para">
             <div class="con">
@@ -145,44 +145,55 @@
                     <form>
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" >
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div  class="form-checkk">
+                                <label>
+                                    <input type="radio" name="gender" value="Male" required> Male
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="Female"> Female
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="Other"> Other
+                                </label>
+                            </div>
                         </div>
                         <label for="appointmentDate">Appointment Date</label>
                         <div class="ff">
                             <div class="form-group">
-                                <input type="date" class="form-control" id="appointmentDate" required>
+                                <input type="date" class="form-control" id="appointmentDate" >
                             </div>
                             <div class="form-group">
-                                <select class="form-control">
-                                   <option>Time</option>
-                                   <option>AM</option>
-                                   <option>PM</option>
+                                <select class="form-control" id="times">
+                                    <option disabled selected>Select a Sloat</option>
+                                   <option value="10:30 AM - 12:30 PM">10:30 AM - 12:30 PM</option>
+                                   <option value="2:30 PM  - 4:30 PM">2:30 PM  - 4:30 PM</option>
+
                                 </select>
                             </div>
                        </div>
                         <div class="form-group">
                             <label for="doctor">Choose a Doctor</label>
-                            <select class="form-control" id="doctor" required>
+                            <select class="form-control" id="doctor" >
                                 <option disabled selected>Select a doctor</option>
-                                <option>Dr. John Doe</option>
-                                <option>Dr. Jane Smith</option>
-                                <option>Dr. Alex Johnson</option>
-                                <option>Dr. Emily Davis</option>
+                                <option value="Dr. John Doe">Dr. John Doe</option>
+                                <option value="Dr. John Doe">Dr. Jane Smith</option>
+                                <option value="Dr. John Doe">Dr. Alex Johnson</option>
+                                <option value="Dr. John Doe">Dr. Emily Davis</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="reason">Reason for Appointment</label>
-                            <textarea class="form-control" id="reason" rows="3" placeholder="Briefly describe your reason for the visit" required></textarea>
+                            <textarea class="form-control" id="reason" rows="3" placeholder="Briefly describe your reason for the visit" ></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block" onclick="alert('Thank You')">Submit Appointment</button>
+                        <button type="submit" class="btn btn-primary btn-block" onclick=appointment()>Submit Appointment</button>
                     </form>
                 </div>
             </div>
@@ -244,48 +255,59 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                        <label for="fullName1">Full Name</label>
+                        <input type="text" class="form-control" id="fullName1" placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <label for="phone1">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone1" placeholder="Enter your phone number" >
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        <label>Gender</label>
+                        <div  class="form-checkk">
+                            <label>
+                                <input type="radio" name="gender" value="Male" required> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Female"> Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Other"> Other
+                            </label>
+                        </div>
                     </div>
-                    <label for="appointmentDate">Appointment Date</label>
-                        <div class="d-flex">
-                            <div class="form-group">
-                                <input type="date" class="form-control" id="appointmentDate" required>
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                   <option>Time</option>
-                                   <option>AM</option>
-                                   <option>PM</option>
-                                </select>
-                            </div>
-                       </div>
+                    <label for="appointmentDate1">Appointment Date</label>
+                    <div class="ff">
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="appointmentDate1" >
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="timess">
+                                <option disabled selected>Select a Sloat</option>
+                               <option value="10:30 AM - 12:30 PM">10:30 AM - 12:30 PM</option>
+                               <option value="2:30 PM  - 4:30 PM">2:30 PM  - 4:30 PM</option>
+
+                            </select>
+                        </div>
+                   </div>
                     <div class="form-group">
-                        <label for="doctor">Choose a Doctor</label>
-                        <select class="form-control" id="doctor" required>
+                        <label for="doctor1">Choose a Doctor</label>
+                        <select class="form-control" id="doctor1" >
                             <option disabled selected>Select a doctor</option>
-                            <option>Dr. John Doe</option>
-                            <option>Dr. Jane Smith</option>
-                            <option>Dr. Alex Johnson</option>
-                            <option>Dr. Emily Davis</option>
+                            <option value="Dr. John Doe">Dr. John Doe</option>
+                            <option value="Dr. John Doe">Dr. Jane Smith</option>
+                            <option value="Dr. John Doe">Dr. Alex Johnson</option>
+                            <option value="Dr. John Doe">Dr. Emily Davis</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="reason">Reason for Appointment</label>
-                        <textarea class="form-control" id="reason" rows="3" placeholder="Briefly describe your reason for the visit" required></textarea>
+                        <label for="reason1">Reason for Appointment</label>
+                        <textarea class="form-control" id="reason1" rows="3" placeholder="Briefly describe your reason for the visit" ></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-            <button type="submit" class="btn btn-primary btn-block" onclick="alert('Thank you')">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block" onclick=appointmente()>Submit</button>
               <button type="button" class="btn btn-default bb" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -298,5 +320,70 @@
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+        let appointments = JSON.parse(localStorage.getItem('notes')) || [];
+    
+        function appointment() {
+            // Create an appointment object
+            let ap = {
+                name: document.querySelector('#fullName').value,
+                phoneno:  document.querySelector('#phone').value,
+                gender :document.querySelector('input[name="gender"]:checked')?.value,
+                date: document.querySelector('#appointmentDate').value,
+                time: document.querySelector('#times').value,
+                doctor: document.querySelector('#doctor').value,
+                reason: document.querySelector('#reason').value
+            };
+    
+            // Optional: Input validation
+            let datee = new Date(ap.date);
+            
+            let today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if(datee<today){
+                alert('Please fill a valid Date');
+            }
+            else if (ap.name && ap.gender && ap.date  && ap.time && ap.doctor && ap.reason) {
+
+                appointments.push(ap); 
+                localStorage.setItem('notes', JSON.stringify(appointments));
+                alert('Thank you for your appointment!');
+            } else {
+                alert('Please fill in all fields.'); 
+            }
+        }
+        function appointmente() {
+            // Create an appointment object
+            let ap = {
+                name: document.querySelector('#fullName1').value,
+                phoneno:  document.querySelector('#phone1').value,
+                gender :document.querySelector('input[name="gender"]:checked')?.value,
+                date: document.querySelector('#appointmentDate1').value,
+                time: document.querySelector('#timess').value,
+                doctor: document.querySelector('#doctor1').value,
+                reason: document.querySelector('#reason1').value
+            };
+    
+            // Optional: Input validation
+            let datee = new Date(ap.date);
+            let today = new Date();
+            today.setHours(0, 0, 0, 0);
+            console.log(datee);
+            console.log(today);
+            
+            
+            if(datee<today){
+                alert('Please fill a valid Date');
+            }
+            else if (ap.name && ap.gender && ap.date  && ap.time && ap.doctor && ap.reason) {
+
+                appointments.push(ap); 
+                localStorage.setItem('notes', JSON.stringify(appointments));
+                alert('Thank you for your appointment!');
+            } else {
+                alert('Please fill in all fields.'); 
+            }
+        }
+    </script>
 </body>
 </html>
